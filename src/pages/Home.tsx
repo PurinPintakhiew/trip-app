@@ -8,7 +8,7 @@ import { fetchTrips } from "../reducers/tripSlice";
 const Home = () => {
   const { keyword } = useParams();
   const navigate = useNavigate();
-  const [filter, setFilter] = useState("");
+  const [filter, setFilter] = useState<string>("");
 
   const { trips, loading } = useSelector(
     (state: ReducerSelectorProps) => state.trip
@@ -38,7 +38,9 @@ const Home = () => {
       <div className="p-4 xl:px-[12rem]">
         <div className="mt-5">
           <div className="text-center text-6xl text-blue-400 font-bold">
-            <Link to={"/"}>เที่ยวไหนดี</Link>
+            <Link to={"/"} onClick={() => setFilter("")}>
+              เที่ยวไหนดี
+            </Link>
           </div>
           <div className="mt-4">
             <input
