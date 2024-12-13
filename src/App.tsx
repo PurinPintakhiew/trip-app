@@ -3,9 +3,12 @@ import { useRoutes } from "react-router-dom";
 import Home from "./pages/Home";
 
 const App = () => {
-  const elements: any = [{ path: "/", element: <Home /> }];
+  const elements: any = [
+    { path: "/", element: <Home /> },
+    { path: "/:keyword", element: <Home /> },
+  ];
 
   return useRoutes(elements);
 };
- 
+
 export default App;
