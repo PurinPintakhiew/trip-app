@@ -85,12 +85,12 @@ const Home = () => {
                                 <div className="font-bold text-sm bg-red-500 text-white rounded-md px-2">
                                   หมวด
                                 </div>
-                                <div className="flex gap-2">
+                                <div className="flex gap-2 overflow-auto">
                                   {item?.tags?.map((tag: any, i: number) => (
                                     <Link
                                       key={i}
                                       to={`/${tag}`}
-                                      className="line underline"
+                                      className="line underline text-nowrap"
                                     >
                                       {tag}
                                     </Link>
